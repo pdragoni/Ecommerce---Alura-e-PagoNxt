@@ -4,7 +4,7 @@
       "DESCRICAO": "Samsung Book Core i5-1135G7, 8G, 256GB SSD, Iris Xe, 15.6\"FHD, W11 Cinza",
       "SLUG": "notebook-samsung",
       "PRECO_UNITARIO": 3523,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "INFORMÁTICA"
     },
     {
@@ -12,7 +12,7 @@
       "DESCRICAO": "Sofá 3 Lugares Retrátil e Reclinável Cama Inbox Compact 1,80m Velusoft Cinza",
       "SLUG": "sofa-3-lugares",
       "PRECO_UNITARIO": 2500,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "MÓVEIS"
     },
     {
@@ -20,7 +20,7 @@
       "DESCRICAO": "Arquitetura limpa: O guia do artesão para estrutura e design de software por Robert C. Martin (Uncle Bob)",
       "SLUG": "livro-clean-architecture",
       "PRECO_UNITARIO": 102.9,
-      "QUANTIDADE_EM_ESTOQUE": 2,
+      "ESTOQUE": 2,
       "CATEGORIA": "LIVROS"
     },
     {
@@ -28,7 +28,7 @@
       "DESCRICAO": "Mesa de Jantar 6 Lugares Lótus Oppa Design - Caramel",
       "SLUG": "mesa-de-jantar-6-lugares",
       "PRECO_UNITARIO": 3678.98,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "MÓVEIS"
     },
     {
@@ -36,7 +36,7 @@
       "DESCRICAO": "Apple iPhone 13 Pro (256 GB) - Verde-alpino",
       "SLUG": "iphone-13-pro",
       "PRECO_UNITARIO": 9176,
-      "QUANTIDADE_EM_ESTOQUE": 6,
+      "ESTOQUE": 6,
       "CATEGORIA": "CELULARES"
     },
     {
@@ -44,7 +44,7 @@
       "DESCRICAO": "Monitor Dell de 27\" P2722H, Preto",
       "SLUG": "monitor-dell-27",
       "PRECO_UNITARIO": 1889,
-      "QUANTIDADE_EM_ESTOQUE": 3,
+      "ESTOQUE": 3,
       "CATEGORIA": "INFORMÁTICA"
     },
     {
@@ -52,7 +52,7 @@
       "DESCRICAO": "Implementando Domain-Driven Design por Vaughn Vernon",
       "SLUG": "livro-implementing-ddd",
       "PRECO_UNITARIO": 144.07,
-      "QUANTIDADE_EM_ESTOQUE": 3,
+      "ESTOQUE": 3,
       "CATEGORIA": "LIVROS"
     },
     {
@@ -60,7 +60,7 @@
       "DESCRICAO": "Pneu Barum by Continental Aro 13 Bravuris 5hm 175/70r13 82t",
       "SLUG": "jogo-de-pneus-continental-13",
       "PRECO_UNITARIO": 1276.79,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "AUTOMOTIVA"
     },
     {
@@ -68,7 +68,7 @@
       "DESCRICAO": "Código limpo: Habilidades práticas do Agile Software por Robert C. Martin (Uncle Bob)",
       "SLUG": "livro-clean",
       "PRECO_UNITARIO": 95.17,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "LIVROS"
     },
     {
@@ -76,7 +76,7 @@
       "DESCRICAO": "Smartphone Samsung Galaxy S22 Ultra 256GB 5G com caneta S PEN - Preto, Câmera Tripla 108MP + Selfie 40MP, RAM 12GB, Tela 6.8",
       "SLUG": "celular-galaxy-22-ultra",
       "PRECO_UNITARIO": 8549.1,
-      "QUANTIDADE_EM_ESTOQUE": 5,
+      "ESTOQUE": 5,
       "CATEGORIA": "CELULARES"
     },
     {
@@ -84,7 +84,7 @@
       "DESCRICAO": "Notebook Apple MacBook Pro de 13 polegadas: Chip M2 da Apple com CPU de oito núcleos e GPU de dez núcleos, de 512 GB SSD - Prateado",
       "SLUG": "notebook-macbook-pro-16",
       "PRECO_UNITARIO": 31752,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "INFORMÁTICA"
     },
     {
@@ -92,7 +92,7 @@
       "DESCRICAO": "Refatoração: Aperfeiçoando o Design de Códigos Existentes por Martin Fowler",
       "SLUG": "livro-refactoring",
       "PRECO_UNITARIO": 173.9,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "LIVROS"
     },
     {
@@ -100,7 +100,7 @@
       "DESCRICAO": "Cama Queen Size Dener Oppa Design - Mel",
       "SLUG": "cama-queen-size-dener",
       "PRECO_UNITARIO": 3100,
-      "QUANTIDADE_EM_ESTOQUE": 2,
+      "ESTOQUE": 2,
       "CATEGORIA": "MÓVEIS"
     },
     {
@@ -108,7 +108,7 @@
       "DESCRICAO": "Kit Combo Central Multimídia 9 Polegadas Mp5 Automotivo Aparelho 2 Din Som Pra Carro Sistema Operacional Android 12 Bluetooth Usb Gps Integrado Conexão Wifi Função Speedplay que Simula Carplay e Android Auto Mais Aplicativos Como Spotify Waze Youtube WhatsApp, Tela Resistiva, Microfone Externo Função Multi Tela 2gb Ram e 32gb de Memória interna, Entradas para Encostos de Cabeça, Comando de Volante e Para Câmera Frontal ou Traseira + Moldura Painel Kia Sorento 2013 a 2014 Cor Preta + Câmera de ré",
       "SLUG": "central-multimidia-automotiva",
       "PRECO_UNITARIO": 711.18,
-      "QUANTIDADE_EM_ESTOQUE": 1,
+      "ESTOQUE": 1,
       "CATEGORIA": "AUTOMOTIVA"
     },
     {
@@ -116,7 +116,7 @@
       "DESCRICAO": "Building Microservices (English Edition) por Sam Newman",
       "SLUG": "livro-building-microservices",
       "PRECO_UNITARIO": 300.28,
-      "QUANTIDADE_EM_ESTOQUE": 2,
+      "ESTOQUE": 2,
       "CATEGORIA": "LIVROS"
     },
     {
@@ -124,7 +124,7 @@
       "DESCRICAO": "Tablet Samsung Galaxy S8 5G SM-X706B 256gb Grafite 8gb Ram",
       "SLUG": "tablet-galaxy-tab-s8",
       "PRECO_UNITARIO": 5939.1,
-      "QUANTIDADE_EM_ESTOQUE": 4,
+      "ESTOQUE": 4,
       "CATEGORIA": "INFORMÁTICA"
     }
   ]
