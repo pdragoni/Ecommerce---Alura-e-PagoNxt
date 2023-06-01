@@ -8,8 +8,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=secret
     volumes:
       - db-mongo-ecomm:/data/db
-    networks:
-      - compose-bridge
+    # networks:
+    #   - compose-bridge
     ports:
       - 27017:27017
 
@@ -20,3 +20,5 @@ services:
     image: ecomm:1.0
     ports:
       - 3000:3000
+volumes:
+  db-mongo-ecomm:
