@@ -8,6 +8,9 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=secret
     volumes:
       - db-mongo-ecomm:/data/db
+      - type: bind
+        source: ./mongo
+        target: /mongo-scripts
     # networks:
     #   - compose-bridge
     ports:
@@ -22,3 +25,4 @@ services:
       - 3000:3000
 volumes:
   db-mongo-ecomm:
+    driver: local
