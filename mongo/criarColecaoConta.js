@@ -1,7 +1,7 @@
 const unidadesFederativas = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RN", "RO", "RR", "RS", "SC", "SE", "SP",]
-const emailRegex = "^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$i";
-const cpfRegex = "^\\d{ 11}$";
-const telefoneRegex = "^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$";
+const emailRegex = "^\\w+([\\.-]?\\w+)@\\w+([\\.-]?\\w+)(\\.\\w{2,3})+$";
+const cpfRegex = "^\\d{11}$";
+const telefoneRegex = "^(1[1-9]|[4689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$";
 const cepRegex = "^[0-9]{8}$";
 const ufRegex = "^[A-Z]{2}$";
 
@@ -81,7 +81,7 @@ const endereco = {
       "pattern": ufRegex
     },
   }
-}
+};
 
 use("mongo-ecomm");
 
@@ -94,7 +94,7 @@ db.accounts.drop(function (err, delOK) {
 db.createCollection("accounts", {
   validator: {
     $jsonSchema: {
-      "bsonType": "object",
+      "bsonType": tipo_objeto,
       "required": ["_id", "nome", "email", "senha", "dataCriacao", "cpf", "telefone", "endereco"],
       "additionalProperties": false,
       "properties": {
@@ -109,4 +109,4 @@ db.createCollection("accounts", {
       }, // account properties object
     } // jsonSchema
   } // validator
-})
+});
