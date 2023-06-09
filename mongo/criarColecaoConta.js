@@ -12,25 +12,30 @@ const id = {
   "bsonType": "objectId",
   "description": "invalid id"
 };
+
 const nome = {
   "bsonType": tipo_string,
   "description": "'nome' must have at least 5 characters",
   "minLength": 5
 };
+
 const email = {
   "bsonType": tipo_string,
   "description": "'email' must have at least 5 characters",
   "minLength": 5,
   "pattern": emailRegex
 };
+
 const senha = {
   "bsonType": tipo_string,
   "minLength": 5,
   "description": "'password' must have at least 5 characters"
 };
+
 const dataCriacao = {
   "bsonType": "date",
 };
+
 const cpf = {
   "bsonType": tipo_string,
   "minLength": 11,
@@ -38,12 +43,14 @@ const cpf = {
   "description": "Your 'cpf' must contain 11 numbers, no symbols",
   "pattern": cpfRegex
 };
+
 const telefone = {
   "bsonType": tipo_string,
   "minLength": 10,
   "description": "'telefone' is invalid",
   "pattern": telefoneRegex
 };
+
 const endereco = {
   "bsonType": tipo_objeto,
   "required": ["rua", "numero", "cep", "bairro", "cidade", "uf"],
