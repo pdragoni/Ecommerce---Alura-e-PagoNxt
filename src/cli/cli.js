@@ -1,23 +1,11 @@
-const arg = process.argv[2];
+const { retrieveStatusResponse } = require("./CategoryService.js");
 
-async function retrieveStatusAndData() {
-  const url = "http://localhost:3000/categories";
-  try {
-    const response = await fetch(url);
-    const { status } = response;
-    const responseJson = await response.json();
-    console.log("response status:", status);
-    console.log(responseJson);
-  }
-  catch (err) {
-    console.log(err);
-  }
-};
+const arg = process.argv[2];
 
 function processarComando(args) {
   switch (args) {
     case "--listarCategorias":
-      return retrieveStatusAndData();
+      return retrieveStatusResponse();
     default:
       console.log("default", args);
   }
