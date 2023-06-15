@@ -1,14 +1,16 @@
-const { retrieveStatusResponse } = require("./CategoryService.js");
+import retrieveStatusResponse from './CategoryService.js';
 
-const arg = process.argv[2];
+const args = process.argv[2];
 
 function processarComando(args) {
+  console.log(args);
   switch (args) {
     case "--listarCategorias":
+      // console.log('--listar', args)
       return retrieveStatusResponse();
     default:
       console.log("default", args);
   }
-}
+};
 
-processarComando(arg);
+processarComando(args);
