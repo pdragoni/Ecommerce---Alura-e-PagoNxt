@@ -4,14 +4,17 @@ async function retrieveStatusResponse() {
     const response = await fetch(url)
     const { status } = response;
     const responseJson = await response.json();
-    // console.log(responseJson)
-    const resposta = `response status ${status} \n ${responseJson}`;
-    // return `response status ${status} ${responseJson}`;
-    console.log(resposta);
+
+    // const resposta = `response status ${status} \n ${categories}`;
+    // console.log(resposta);
+
+    console.log("status response", status);
+    console.log(responseJson);
   }
   catch (err) {
     console.log(err);
   }
 };
+// retrieveStatusResponse();
 
-module.exports = { retrieveStatusResponse }
+export default retrieveStatusResponse;
