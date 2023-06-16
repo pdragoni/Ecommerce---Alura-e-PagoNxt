@@ -1,5 +1,19 @@
 import fs from "fs";
-import db from "./db.json" assert { type: "json"}; // static import assertion (  code: 'ERR_IMPORT_ASSERTION_TYPE_MISSING')
+
+const jsonHandler = (jsonPath) => {
+  const rawData = fs.readFileSync(jsonPath);
+  const data = JSON.parse(rawData);
+  return data;
+}
+
+const errorHandler = (err) => {
+  if (err) {
+    console.log(err);
+  }
+  else {
+    console.log("File written su")
+  };
+};
 
 export class CategoryService {
   static async findCategories() {
@@ -34,19 +48,24 @@ export class CategoryService {
   }
 
   static async createCategory(query) {
-    // const encoding = 'utf-8';
-    // const db = await fs.readFile("./src/cli/db.json");
-    console.log("db", db);
-    return query
-    // const jsonPath = "./src/cli/novaCategoria.json";
-    // const newCategory = await fs.promises.writeFile(db.json, jsonPath, (err) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   else {
-    //     console.log("File written su")
-    //   }
-    // });
-    // }
+    const jsonPath = "./src/cli/novaCategoria.json";
+    const dbPath = "./src/cli/db.json";
+
+    const { nome, status } = jsonHandler(jsonPath);
+
+    const db = jsonHandler(dbPath);
+
+    const id = db.categories.length + 1;
+
+    const newCategory = {
+      id, nome, status,
+    };
+
+    db.categories.push(newCategory);
+
+    const newData = JSON.stringify(db, null, 2);
+    fs.writeFileSync(dbPath, newData, errorHandler);
+    console.log(db.categories);
+
   }
 }

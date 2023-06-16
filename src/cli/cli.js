@@ -18,12 +18,10 @@ async function processarComando() {
       return category;
 
     case "--inserirCategoria":
-      const string = args[3];
-      if (typeof string === "string") {
-        const query = string.toLowerCase();
-        const newCategory = await createCategory(query);
-        return newCategory;
-      }
+
+      const newCategory = await createCategory();
+      return newCategory;
+
 
     default:
       console.log("default", args);
