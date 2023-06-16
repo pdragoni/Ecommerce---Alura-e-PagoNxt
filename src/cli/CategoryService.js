@@ -23,12 +23,10 @@ export class CategoryService {
       const response = await fetch(url)
       const { status } = response;
       const responseJson = await response.json();
-      const category = await responseJson.filter((cat => cat.id === { id }))
+      const category = await responseJson.filter(cat => cat.id === Number(id))[0]; // retorna um array com um objeto categoria
       category ? console.log("response status:", status, category) : console.log("Category Not Found");
-      console.log(category);
     } catch (err) {
       console.log(err)
     }
   }
-
 }
