@@ -1,3 +1,6 @@
+import fs from "fs";
+import db from "./db.json" assert { type: "json"}; // static import assertion (  code: 'ERR_IMPORT_ASSERTION_TYPE_MISSING')
+
 export class CategoryService {
   static async findCategories() {
     const url = "http://localhost:3000/categories";
@@ -28,5 +31,22 @@ export class CategoryService {
     } catch (err) {
       console.log(err)
     }
+  }
+
+  static async createCategory(query) {
+    // const encoding = 'utf-8';
+    // const db = await fs.readFile("./src/cli/db.json");
+    console.log("db", db);
+    return query
+    // const jsonPath = "./src/cli/novaCategoria.json";
+    // const newCategory = await fs.promises.writeFile(db.json, jsonPath, (err) => {
+    //   if (err) {
+    //     console.log(err);
+    //   }
+    //   else {
+    //     console.log("File written su")
+    //   }
+    // });
+    // }
   }
 }
