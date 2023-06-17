@@ -1,10 +1,9 @@
 import { CategoryService } from "./CategoryService.js";
-const { createCategory, findCategories, findCategoryById } = CategoryService;
+const { createCategory, findCategories, findCategoryById, updateCategory } = CategoryService;
 
 const args = process.argv;
 
 async function processarComando() {
-  // console.log(args);
   switch (args[2]) {
     case "--listarCategorias":
       // console.log('--listar', args) 
@@ -12,16 +11,25 @@ async function processarComando() {
       return categories;
 
     case "--recuperarCategoriaPorId":
-      const id = args[3];
       // console.log('--porId', args)
+      let id = Number(args[3]);
       const category = await findCategoryById(id);
       return category;
 
     case "--inserirCategoria":
-
-      const newCategory = await createCategory();
+      let jsonPath = args[3];
+      const newCategory = await createCategory(jsonPath);
       return newCategory;
 
+    case "--atualizarCategoria":
+      let idToUpdate = Number(args[3])
+      let path = args[4];
+
+      return updateCategory(idToUpdate, path);
+
+    case "--excluirCategoria":
+      // console.log(id)
+      return deleteCategory(id);
 
     default:
       console.log("default", args);

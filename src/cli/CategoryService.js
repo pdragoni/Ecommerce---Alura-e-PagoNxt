@@ -40,15 +40,16 @@ export class CategoryService {
       const response = await fetch(url)
       const { status } = response;
       const responseJson = await response.json();
-      const category = await responseJson.filter(cat => cat.id === Number(id))[0]; // retorna um array com um objeto categoria
-      category ? console.log("response status:", status, category) : console.log("Category Not Found");
+      const category = await responseJson.filter(cat => cat.id === id)[0]; // retorna um array com um objeto categoria
+      category ? console.log("response status:", status, category) : false;
     } catch (err) {
-      console.log(err)
+      errorHandler(err)
     }
   }
 
-  static async createCategory(query) {
-    const jsonPath = "./src/cli/novaCategoria.json";
+  static async createCategory(jsonPath) {
+    const url = "http://localhost:3000/categories";
+
     const dbPath = "./src/cli/db.json";
 
     const { nome, status } = jsonHandler(jsonPath);
@@ -61,11 +62,58 @@ export class CategoryService {
       id, nome, status,
     };
 
-    db.categories.push(newCategory);
+    const insertOptions = {
+      method: "POST",
+      headers: { "Content-type": 'application/json' },
+      body: JSON.stringify(newCategory),
+    }
 
-    const newData = JSON.stringify(db, null, 2);
-    fs.writeFileSync(dbPath, newData, errorHandler);
-    console.log(db.categories);
+    try {
+      const response = await fetch(url, insertOptions);
+      const novaCategoria = await response.json();
+      console.log("response status", response.status, "response data", novaCategoria);
+    }
 
+    catch (err) {
+      errorHandler(err);
+    }
+
+  }
+
+  static async deleteCategory(id) {
+    const dbPath = "./src/cli/db.json";
+    const db = jsonHandler(dbPath);
+
+    const categoryToBeRemoved = findIndex((cat) => cat.id === id);
+    return db.categories.splice(categoryToBeRemoved);
+
+    // console.log(db.categories);
+  }
+
+  static async updateCategory(id, jsonPath) {
+    const { nome, status } = jsonHandler(jsonPath);
+    const url = `http://localhost:3000/categories/${id}`;
+
+    // const dbPath = "./src/cli/db.json";
+    // const db = jsonHandler(dbPath)
+
+    try {
+      const newCategory = {
+        nome, status,
+      };
+      const updateOptions = {
+        method: "PUT",
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify(newCategory),
+      };
+
+      console.log(newCategory);
+      const result = await fetch(url, newCategory);
+      const categoriaAtualizada = await result.json();
+      console.log("response status", result.status, "categoria atualizada", categoriaAtualizada);
+    }
+    catch (err) {
+      errorHandler(err)
+    }
   }
 }
