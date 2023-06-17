@@ -108,7 +108,7 @@ export class CategoryService {
       };
 
       console.log(newCategory);
-      const result = await fetch(url, newCategory);
+      const result = await fetch(url, updateOptions);
       const categoriaAtualizada = await result.json();
       console.log("response status", result.status, "categoria atualizada", categoriaAtualizada);
     }
