@@ -5,8 +5,8 @@ const router = express.Router();
 
 router
   .get("/categories", categoriesController.listarCategorias)
-  .get("/categories/:id", categoriesController.listarCategoriaPorId);
-// .post("/categories", categoriesController.cadastrarCategoria)
+  .get("/categories/:id", categoriesController.listarCategoriaPorId)
+  .post("/categories", categoriesController.cadastrarCategoria)
 // .put("/categories/:id", categoriesController.atualizarCategoria)
 // .delete("/categories/:id", categoriesController.excluirCategoria)
 
