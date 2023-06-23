@@ -36,6 +36,7 @@ class categoriesController {
     if (nome.length <= 3) res.send('"Nome" deve conter 5 caracteres pelo menos');
     if (!status) { status = 'INATIVA' };
     try {
+      nome = nome.toUpperCase();
       const category = new Categories({
         nome, status,
       });
