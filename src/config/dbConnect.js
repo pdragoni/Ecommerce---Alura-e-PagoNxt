@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-mongoose.connect("localhost:/");
+mongoose.connect("mongodb://admin:secret@127.0.0.1:27017/mongo-ecomm?authSource=admin");
 
 let db = mongoose.connection;
 

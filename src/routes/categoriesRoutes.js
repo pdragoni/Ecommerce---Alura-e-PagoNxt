@@ -1,10 +1,10 @@
 import express from "express";
-import categoriesController from "../controllers/autoresController.js";
+import categoriesController from "../controllers/CategoriesController";
 
 const router = express.Router();
 
 router
-  .get("/api/categories", categoriesController.listarcategories);
+  .get("/categories", categoriesController.listarCategorias);
 // .get("/categories/:id", categoriesController.listarCategoriaPorId)
 // .post("/categories", categoriesController.cadastrarCategoria)
 // .put("/categories/:id", categoriesController.atualizarCategoria)

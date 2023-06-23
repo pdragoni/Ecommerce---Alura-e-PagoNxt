@@ -1,4 +1,3 @@
-import express from "express";
 import categoriesRoute from './categoriesRoutes.js';
 
 const routes = (app) => {
@@ -7,7 +6,6 @@ const routes = (app) => {
   })
 
   app.use(
-    express.json(),
     categoriesRoute,
   )
 }
