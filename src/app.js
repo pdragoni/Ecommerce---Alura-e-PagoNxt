@@ -11,4 +11,5 @@ db.once("open", function () {
 const app = express();
 app.use(express.json());
 routes(app);
+
 export default app;

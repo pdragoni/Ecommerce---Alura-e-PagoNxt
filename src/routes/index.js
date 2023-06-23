@@ -1,4 +1,4 @@
-import categoriesRoute from './categoriesRoutes.js';
+import categoriesRouter from './categoriesRoutes.js';
 
 const routes = (app) => {
   app.route('/').get((_req, res) => {
@@ -6,7 +6,7 @@ const routes = (app) => {
   })
 
   app.use(
-    categoriesRoute,
+    categoriesRouter,
   )
 }
 
